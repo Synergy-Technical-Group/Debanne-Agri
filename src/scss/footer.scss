@@ -1,0 +1,7 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.footer {
+  background-color: $brand-gray;
+  padding: 110px;
+}

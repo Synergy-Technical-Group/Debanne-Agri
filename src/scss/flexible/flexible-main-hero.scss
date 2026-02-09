@@ -1,0 +1,8 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "swiper/swiper" as *;
+@use "swiper/modules/navigation" as *;
+
+.hero-slider {
+  padding: 20px 0;
+}

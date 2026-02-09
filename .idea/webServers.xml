@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c2f61e43-0cf5-452f-9cc5-70048551981b" name="switchfood" url="https://51.20.74.214">
+        <fileTransfer accessType="SFTP" host="51.20.74.214" port="22" sshConfigId="d5cc4256-a32d-4ef8-9dcb-463ce94ef91c" sshConfig="bitnami@51.20.74.214:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

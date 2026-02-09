@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="51.20.74.214" id="d5cc4256-a32d-4ef8-9dcb-463ce94ef91c" keyPath="D:\Projects\Elli Switchfood\st-kp-3.pem" port="22" nameFormat="DESCRIPTIVE" username="bitnami" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>

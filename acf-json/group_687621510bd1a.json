@@ -1,0 +1,111 @@
+{
+    "key": "group_687621510bd1a",
+    "title": "Flexible Content",
+    "fields": [
+        {
+            "key": "field_6876215116cef",
+            "label": "Flexible Content",
+            "name": "flexible_content",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_6876215ec4fe2": {
+                    "key": "layout_6876215ec4fe2",
+                    "name": "main_hero",
+                    "label": "Main Hero",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6879faf47071b",
+                            "label": "Main Hero",
+                            "name": "main_hero",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_6879f8d9333ff"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_68887b42eb96d": {
+                    "key": "layout_68887b42eb96d",
+                    "name": "fancy_box_gallery",
+                    "label": "Fancy Box Gallery",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68887b42eb96f",
+                            "label": "Fancy Box Gallery",
+                            "name": "fancy_box_gallery",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_68887afecc2c1"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "min": "",
+            "max": "",
+            "button_label": "Add Row"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/template-flexible-content.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1753774947
+}
