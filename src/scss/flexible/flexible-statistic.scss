@@ -1,0 +1,91 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "swiper/swiper" as *;
+@use "swiper/modules/navigation" as *;
+
+.statistic{
+  padding-bottom: 120px;
+  font-family: $body-font;
+  h2{
+    margin: 0;
+  }
+  &__title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $general;
+    padding-bottom: 27px;
+    @include media-breakpoint-down(lg) {
+      font-size: 26px;
+      padding-bottom: 20px;
+    }
+  }
+  &__subtitle{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 31px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: $general;
+    padding-bottom: 73px;
+    max-width: 879px;
+    width: 100%;
+    margin: 0 auto;
+    @include media-breakpoint-down(lg) {
+      font-size: 16px;
+      padding-bottom: 30px;
+    }
+  }
+  &__flex{
+    display: flex;
+    gap: 23px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  &__item{
+    border: 1px solid $primary;
+    border-radius: 100%;
+    max-width: 261px;
+    width: 100%;
+    min-height: 261px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:7px;
+    color: $general;
+  }
+  &__number{
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+  &__text{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+  }
+  &__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 89px;
+    a{
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-transform: none;
+      padding: 16px 80px;
+      border-radius: 30px;
+    }
+  }
+}

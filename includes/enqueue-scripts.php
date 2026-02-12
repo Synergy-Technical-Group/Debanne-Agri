@@ -133,6 +133,21 @@ if ( ! function_exists( 'thm_enqueue_scripts_flexible_sections' ) ) {
                                 )
                         )
                 ),
+                'statistic' => array(
+                        'css' => array(
+                                'path'   => '/dist/css/flexible/flexible-statistic.css',
+                                'deps'   => array(),
+                                'inline' => false
+                        ),
+                        'js' => array(
+                                'path'     => '/dist/js/flexible/flexible-statistic.min.js',
+                                'deps'     => array(),
+                                'strategy' => array(
+                                        'in_footer'  => true,
+                                        'strategy'   => 'defer'
+                                )
+                        )
+                ),
                 'fancy-box-gallery' => array(
                         'css' => array(
                                 'path'   => '/dist/css/flexible/flexible-fancy-box-gallery.css',
