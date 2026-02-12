@@ -23,6 +23,7 @@ if ( ! function_exists( 'thm_register_nav_menu' ) ) {
         register_nav_menus( array(
             'primary_menu' => __( 'Header Menu', THM_TEXT_DOMAIN ),
             'footer_menu'  => __( 'Footer Menu', THM_TEXT_DOMAIN ),
+            'footer_bottom_menu' => __( 'Footer Bottom Menu', THM_TEXT_DOMAIN ),
         ) );
     }
 }

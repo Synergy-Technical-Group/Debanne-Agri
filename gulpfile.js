@@ -10,9 +10,9 @@ const glob = require('glob');
 const postcss = require('gulp-postcss');
 const pxtorem = require('postcss-pxtorem');
 
-const themeName = 'theme',
-      host      = 'http://localhost.local';
-var   mode      = 'production';
+const themeName = 'debbane-agri',
+    host    =  'http://debbane-agri.local';
+var mode = 'production';
 
 function browserSync(done) {
     browserSyncConst.init({

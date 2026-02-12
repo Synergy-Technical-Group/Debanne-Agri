@@ -49,6 +49,70 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_698c8a7949773": {
+                    "key": "layout_698c8a7949773",
+                    "name": "our_services",
+                    "label": "Our Services",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_698c8a9e49776",
+                            "label": "Our Services",
+                            "name": "our_services",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_698c897c8f780"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_698cd30066dfa": {
+                    "key": "layout_698cd30066dfa",
+                    "name": "news",
+                    "label": "News",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_698cd30c66dfd",
+                            "label": "News",
+                            "name": "news",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_698cd022087db"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_68887b42eb96d": {
                     "key": "layout_68887b42eb96d",
                     "name": "fancy_box_gallery",
@@ -69,9 +133,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "clone": [
-                                "group_68887afecc2c1"
-                            ],
+                            "clone": "",
                             "display": "seamless",
                             "layout": "block",
                             "prefix_label": 0,
@@ -107,5 +169,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753774947
+    "modified": 1770836844
 }

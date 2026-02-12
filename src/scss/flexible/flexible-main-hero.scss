@@ -3,6 +3,153 @@
 @use "swiper/swiper" as *;
 @use "swiper/modules/navigation" as *;
 
-.hero-slider {
-  padding: 20px 0;
-}
+.hero-slider{
+  position: relative;
+  &__content{
+    position: absolute;
+    top: 50%;
+    color: $white;
+    transform: translate(0, -14%);
+    @include media-breakpoint-down(lg) {
+      transform: translate(0, -50%);
+    }
+    p{
+      margin: 0;
+    }
+  }
+  &__image-wrapper img{
+    @include media-breakpoint-down(lg) {
+      height: 704px;
+    }
+  }
+  &__title{
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 133%;
+    letter-spacing: 0%;
+    @include media-breakpoint-down(lg) {
+      font-size: 30px;
+    }
+  }
+  &__title-bottom{
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 133%;
+    letter-spacing: 0%;
+    padding-bottom: 25px;
+    @include media-breakpoint-down(lg) {
+      font-size: 26px;
+    }
+  }
+  &__btn{
+    display: flex;
+    a{
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      padding: 19px 66px;
+      height: 53px;
+      text-transform: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__events{
+    position: absolute;
+    right: 40px;
+    bottom: 99px;
+    top: auto;
+    @include media-breakpoint-down(lg) {
+      bottom: 60px;
+      left: 0;
+      right: auto;
+    }
+  }
+  .hero-slider__events-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include media-breakpoint-down(lg) {
+      flex-direction: row;
+      gap:20px;
+      flex-wrap: wrap;
+    }
+    .event-item {
+      margin-bottom: -20px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 0;
+      }
+
+      &:first-of-type {
+        z-index: 2;
+      }
+      @include media-breakpoint-up(lg) {
+        &:last-of-type {
+          max-width: 249px;
+          padding: 14px;
+
+          .event-item__title {
+            font-size: 10px;
+          }
+
+          .event-item__date {
+            .event-item__date__day {
+              font-size: 24px;
+            }
+
+            .event-item__date__month {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+
+    }
+      .event-item {
+        display: flex;
+        align-items: center;
+        color: $white;
+        background: #ADADAD66;
+        backdrop-filter: blur(24px);
+        max-width: 292px;
+        width: 100%;
+        border-radius: 5px;
+        padding: 17px;
+
+        &__title {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          margin: 0;
+          padding-left: 15px;
+        }
+
+        &__date {
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-right: 11px;
+          border-right: 1px solid rgba(255, 2555, 2555, 0.2);
+
+          &__day {
+            font-weight: 400;
+            font-size: 29px;
+            line-height: 100%;
+            letter-spacing: 0%;
+          }
+
+          &__month {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }

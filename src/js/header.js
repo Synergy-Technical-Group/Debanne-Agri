@@ -1,51 +1,53 @@
-jQuery(document).ready(function($){
-    //Header burger menu
-    $('.js-nav-toggle').on('click', function() {
-        setHeaderMenuHeight();
-        let $currentElement = $(this)
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.querySelector('.js-nav-toggle');
+    const menu = document.getElementById('menu-header');
+    const body = document.body;
 
-        $currentElement.toggleClass('active');
-        $currentElement.siblings('ul').slideToggle();
-        $('body, html').toggleClass('lock-scroll');
-    })
-
-    //Set header menu height on resize
-    $(window).on('resize', function() {
-        setHeaderMenuHeight();
-
-        let $navToggle =  $('.js-nav-toggle'),
-            $dropDownToggle = $('.menu-chevron');
-
-        $navToggle.removeClass('active');
-        $dropDownToggle.removeClass('active');
-        $dropDownToggle.parents('li').find('.sub-menu').attr('style', '');
-        $navToggle.siblings('ul').attr('style', '');
-    })
-
-    //Dropdown Menu {
-    $('.menu-chevron').on('click', function(e) {
-        e.preventDefault();
-
-        let $currentElement = $(this),
-            $subMenu = $currentElement.parents('li').find('.sub-menu');
-
-        if ( $(window).width() < 992 ) {
-            $currentElement.toggleClass('active');
-            $subMenu.slideToggle();
-        }
-    })
-
-    //Calculate menu height
-    function setHeaderMenuHeight() {
-        let $menu = $('#menu-header')
-
-        if ( $(window).width() >= 992 ) {
-            $menu.css( { 'height': 'auto', 'top': '0' } );
-        } else {
-            let headerSize = $('#header').innerHeight(),
-                menuSize = $(window).innerHeight() - headerSize;
-
-            $menu.css( { 'height': menuSize + 'px', 'top': headerSize + 'px' } );
-        }
+    // Відкриття/закриття бургер-меню
+    if (navToggle && menu) {
+        navToggle.addEventListener('click', function() {
+            navToggle.classList.toggle('active');
+            menu.classList.toggle('open');
+            body.classList.toggle('lock-scroll');
+        });
     }
+
+    // Сабменю на мобільних
+    const menuItems = document.querySelectorAll('#menu-header .menu-item-has-children > a');
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            if (window.innerWidth < 992) {
+                e.preventDefault(); // блокуємо перехід по лінці
+
+                const parentItem = item.parentElement;
+                const subMenu = parentItem.querySelector('.sub-menu');
+                const chevron = item.querySelector('.menu-chevron');
+
+                parentItem.classList.toggle('open');
+                subMenu.classList.toggle('open');
+
+                // плавне відкриття
+                if (subMenu.classList.contains('open')) {
+                    subMenu.style.maxHeight = subMenu.scrollHeight + 'px';
+                    if (chevron) chevron.classList.add('active'); // поворот стрілки
+                } else {
+                    subMenu.style.maxHeight = 0;
+                    if (chevron) chevron.classList.remove('active'); // повертаємо стрілку
+                }
+            }
+        });
+    });
+
+    // ресайз — прибираємо мобільні стилі при десктопі
+    window.addEventListener('resize', function() {
+        if (window.innerWidth >= 992) {
+            document.querySelectorAll('.sub-menu').forEach(menu => {
+                menu.style.maxHeight = '';
+                menu.classList.remove('open');
+            });
+            document.querySelectorAll('.menu-item-has-children').forEach(li => li.classList.remove('open'));
+            document.querySelectorAll('.menu-chevron').forEach(c => c.classList.remove('active'));
+        }
+    });
 });

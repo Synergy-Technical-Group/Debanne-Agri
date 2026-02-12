@@ -3,7 +3,7 @@
 
 .not-found {
   padding: 50px 15px;
-  background-color: $brand-light-gray;
+  //background-color: $brand-light-gray;
   min-height: 70vh;
   display: flex;
   align-items: center;
@@ -59,8 +59,8 @@
     &:hover,
     &:focus,
     &:active {
-      background-color: $brand-dark-gray;
-      border-color: $brand-dark-gray;
+      //background-color: $brand-dark-gray;
+      //border-color: $brand-dark-gray;
       color: $white;
     }
   }

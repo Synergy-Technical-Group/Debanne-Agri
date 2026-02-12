@@ -1,24 +1,26 @@
 // ----- Colors ----- //
 $theme_folder: '/wp-content/themes/main-theme-flexible';
 
-$primary: #FFDB4D;
-$secondary: #89DB33;
-$brand-blue: #007EFF;
-$brand-dark-blue: #0D4BD7;
-$brand-violet: #AA2B8E;
-$brand-scarlet: #FF3800;
-$brand-gray: #6C757D;
-$brand-light-gray: #F8F9FA;
-$brand-dark-gray: #495157;
+$general: #575756;
+$primary: #05A65D;
+$accent:  #93C256;
+
+$secondary: #FFFFFF;
+$brand-blue: #20A5C2;
+$brand-dark-blue: #117B98;
+
+$brand-gray: #575756;
+
+$brand-dark-green:  #107E4B;
 
 $white: #fff;
 $black: #000;
 
 $main-color: $primary;
-$body-color: #000;
+$body-color: $general;
 $sg-link-color: $brand-blue;
 
 // ----- Fonts ----- //
-$heading-font: Lato, sans-serif;
-$body-font: Roboto, sans-serif;
+$heading-font: Inter, sans-serif;
+$body-font: Inter, sans-serif;
 $fa: "Font Awesome 6 Free";

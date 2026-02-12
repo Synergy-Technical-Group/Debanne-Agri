@@ -7,7 +7,6 @@
 
 html, body {
   width: 100%;
-  overflow-x: hidden;
 }
 
 body {
@@ -37,6 +36,11 @@ p,span,a,ul,ol {
   font-family: $body-font;
 }
 
+a{
+  text-decoration: none;
+  transition: all .5s;
+}
+
 main {
   flex-grow: 1;
 }
@@ -46,12 +50,12 @@ footer {
 }
 
 .lock-scroll {
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1446px;
   padding-left: 16px;
   padding-right: 16px;
   margin-left: auto;

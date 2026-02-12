@@ -88,39 +88,70 @@ if ( ! function_exists( 'thm_enqueue_scripts_flexible_sections' ) ) {
 	function thm_enqueue_scripts_flexible_sections() {
 		$id                = get_the_ID();
         $flexible_sections = array(
-            'main-hero' => array(
-                'css' => array(
-                    'path'   => '/dist/css/flexible/flexible-main-hero.css',
-                    'deps'   => array(),
-                    'inline' => true // !!! Should be false if section is not First Screen
+                'main-hero' => array(
+                        'css' => array(
+                                'path'   => '/dist/css/flexible/flexible-main-hero.css',
+                                'deps'   => array(),
+                                'inline' => true
+                        ),
+                        'js' => array(
+                                'path'     => '/dist/js/flexible/flexible-main-hero.min.js',
+                                'deps'     => array(),
+                                'strategy' => array(
+                                        'in_footer'  => true,
+                                        'strategy'   => 'defer'
+                                )
+                        )
                 ),
-                'js' => array(
-                    'path'     => '/dist/js/flexible/flexible-main-hero.min.js',
-                    'deps'     => array(),
-                    'strategy' => array(
-                        'in_footer'  => true,
-                        'strategy'   => 'defer'
-                    )
+                'our-services' => array(
+                        'css' => array(
+                                'path'   => '/dist/css/flexible/flexible-our-services.css',
+                                'deps'   => array(),
+                                'inline' => false
+                        ),
+                        'js' => array(
+                                'path'     => '/dist/js/flexible/flexible-our-services.min.js',
+                                'deps'     => array(),
+                                'strategy' => array(
+                                        'in_footer'  => true,
+                                        'strategy'   => 'defer'
+                                )
+                        )
+                ),
+                'news' => array(
+                        'css' => array(
+                                'path'   => '/dist/css/flexible/flexible-news.css',
+                                'deps'   => array(),
+                                'inline' => false
+                        ),
+                        'js' => array(
+                                'path'     => '/dist/js/flexible/flexible-news.min.js',
+                                'deps'     => array(),
+                                'strategy' => array(
+                                        'in_footer'  => true,
+                                        'strategy'   => 'defer'
+                                )
+                        )
+                ),
+                'fancy-box-gallery' => array(
+                        'css' => array(
+                                'path'   => '/dist/css/flexible/flexible-fancy-box-gallery.css',
+                                'deps'   => array(),
+                                'inline' => false
+                        ),
+                        'js' => array(
+                                'path'     => '/dist/js/flexible/flexible-fancy-box-gallery.min.js',
+                                'deps'     => array('thm-fancybox', 'thm-aos'),
+                                'strategy' => array(
+                                        'in_footer'  => true,
+                                        'strategy'   => 'defer'
+                                )
+                        )
                 )
-            ),
-	        'fancy-box-gallery' => array(
-		        'css' => array(
-			        'path'   => '/dist/css/flexible/flexible-fancy-box-gallery.css',
-			        'deps'   => array(),
-			        'inline' => false
-		        ),
-		        'js' => array(
-			        'path'     => '/dist/js/flexible/flexible-fancy-box-gallery.min.js',
-			        'deps'     => array('thm-fancybox', 'thm-aos'),
-			        'strategy' => array(
-				        'in_footer'  => true,
-				        'strategy'   => 'defer'
-			        )
-		        )
-	        )
         );
 
-		if ( is_archive() ) {
+
+        if ( is_archive() ) {
 			$archive_slug = get_query_var( 'post_type' );
 			$id = $archive_slug;
 		}

@@ -1,0 +1,130 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "swiper/swiper" as *;
+@use "swiper/modules/navigation" as *;
+
+
+.news-views{
+  max-width: 1512px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 96px 0 142px;
+  border-top: 1px solid #D4D4D4;
+  @include media-breakpoint-down(lg) {
+    padding: 40px 0 40px;
+  }
+  &__title{
+    margin-top:0;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: normal;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 66px;
+    color: $general;
+    @include media-breakpoint-down(lg) {
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
+  }
+  &__grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  &__card:first-child{
+    flex: 100%;
+    .news-views__card__media{
+      img{
+        min-height: 461px;
+      }
+    }
+    .news-views__overlay{
+      max-width: 502px;
+      background-color: rgba($primary, .6);
+      padding-top: 91px;
+      padding-left: 25px;
+      height: 100%;
+      top:0;
+      bottom: auto;
+      &:after{
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 280px;
+        background: $accent;
+        left: 0;
+        top: 91px;
+      }
+    }
+    .news-views__card__title{
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      margin-bottom: 14px;
+      color: $white;
+      margin-top: 0;
+    }
+    .news-views__card__excerpt{
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+      letter-spacing: 0%;
+      margin-bottom: 26px;
+      margin-top: 0;
+      color:$white;
+    }
+  }
+  &__card{
+    flex: 33%;
+    position: relative;
+    @include media-breakpoint-down(md) {
+      flex: auto;
+    }
+    &__media{
+      display: flex;
+    }
+    &__title{
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      margin-bottom: 16px;
+      margin-top: 0;
+      color:$white;
+      @include media-breakpoint-down(ld) {
+        font-size: 16px;
+      }
+    }
+  }
+  &__overlay{
+    position: absolute;
+    top:auto;
+    width: 100%;
+    height: auto;
+    bottom: 13px;
+    padding-left: 24px;
+    &:after{
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 75px;
+      background: $accent;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  &__btn__more{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: $white;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+}

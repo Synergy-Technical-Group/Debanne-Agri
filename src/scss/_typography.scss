@@ -17,6 +17,9 @@ small,
 }
 
 // ----- LIST ----- //
+li{
+    list-style: none;
+}
 ul,
 ol {
     padding-left: 12px;
@@ -35,19 +38,18 @@ ol {
 .btn {
     font-size: 14px;
     font-family: $body-font;
-    text-transform: uppercase;
-    font-weight: 700;
     letter-spacing: 1.5px;
-    background-color: $black;
     color: $white;
     border-radius: 16px;
-    padding: 10px 20px;
+    font-weight: 600;
+    line-height: 100%;
+    text-transform: uppercase;
+    padding: 7px 17px;
+    background: $primary;
 
     &:hover,
     &:focus {
-        background-color: $white;
-        border-bottom: 1px solid $black;
-        color: $black;
+        background-color: $brand-dark-green;
     }
 
     @include transition();
