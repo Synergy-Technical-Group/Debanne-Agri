@@ -1,0 +1,119 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.agrotica {
+  padding: 112px 0 110px;
+  text-align: center;
+  @include media-breakpoint-down(md) {
+   padding: 60px 0 60px;
+  }
+
+  &__flex {
+    display: flex;
+    gap: 54px;
+    align-items: flex-start;
+    justify-content: space-between;
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+  }
+
+  &-card__link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    color: $white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 54px;
+    max-width: 917px;
+    width: 100%;
+
+    .agrotica-card {
+      flex: 33%;
+      position: relative;
+      text-align: left;
+
+      @include media-breakpoint-down(md) {
+        flex: 100%;
+      }
+
+      &__thumb {
+        display: flex;
+        @include media-breakpoint-down(md) {
+          height: 300px;
+        }
+      }
+
+      &__inner {
+        position: absolute;
+        bottom: 23px;
+        padding-left: 12px;
+        border-left: 12px solid $brand-blue;
+      }
+
+      &__title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1;
+        margin: 0 0 20px;
+        color: $white;
+        max-width: 300px;
+        width: 100%;
+
+        @include media-breakpoint-down(lg) {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .agrotica-card:first-child {
+      flex: 100%;
+
+      .agrotica-card__title {
+        max-width: 555px;
+      }
+
+      .agrotica-card__inner {
+        bottom: 52px;
+      }
+    }
+  }
+
+  &__sidebar {
+    display: grid;
+    row-gap: 54px;
+
+    &-item {
+      display: flex;
+      gap: 17px;
+      justify-content: flex-start;
+
+      &__thumb {
+        display: flex;
+      }
+      &__content {
+        text-align: left;
+      }
+
+      &__title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1;
+        margin: 0;
+        color: $general;
+        padding-bottom: 16px;
+      }
+    }
+    .agrotica-card__link {
+      color: $brand-blue;
+    }
+  }
+}

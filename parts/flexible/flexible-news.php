@@ -23,7 +23,6 @@ if (empty($posts) || !is_array($posts)) {
             $link  = get_permalink($id) ?: '';
             $thumb_id = (int) get_post_thumbnail_id($id);
 
-            // ✅ повний контент (без обрізання)
             $content = get_post_field('post_content', $id);
             $content = trim($content);
             ?>

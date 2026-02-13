@@ -22,6 +22,40 @@ body {
   }
 }
 
+//for section
+
+h2{
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  color: $general;
+  padding-bottom: 27px;
+  margin: 0;
+  @include media-breakpoint-down(lg) {
+    font-size: 26px;
+    padding-bottom: 20px;
+  }
+}
+h2+p{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 31px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: $general;
+  padding-bottom: 73px;
+  max-width: 879px;
+  width: 100%;
+  margin: 0 auto;
+  @include media-breakpoint-down(lg) {
+    font-size: 16px;
+    padding-bottom: 30px;
+  }
+}
+
 .thm-lazy-loading {
   display: block;
   font-size: 0;

@@ -1,8 +1,5 @@
 @use "../variables" as *;
 @use "../mixins" as *;
-@use "swiper/swiper" as *;
-@use "swiper/modules/navigation" as *;
-
 
 .news-views{
   max-width: 1512px;
@@ -14,19 +11,7 @@
     padding: 40px 0 40px;
   }
   &__title{
-    margin-top:0;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: normal;
-    letter-spacing: 0%;
-    text-align: center;
-    text-transform: uppercase;
     margin-bottom: 66px;
-    color: $general;
-    @include media-breakpoint-down(lg) {
-      font-size: 26px;
-      margin-bottom: 30px;
-    }
   }
   &__grid{
     display: flex;

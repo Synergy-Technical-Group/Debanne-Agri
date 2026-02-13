@@ -1,44 +1,11 @@
 @use "../variables" as *;
 @use "../mixins" as *;
-@use "swiper/swiper" as *;
-@use "swiper/modules/navigation" as *;
 
 .statistic{
   padding-bottom: 120px;
   font-family: $body-font;
-  h2{
-    margin: 0;
-  }
-  &__title{
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    text-align: center;
-    text-transform: uppercase;
-    color: $general;
-    padding-bottom: 27px;
-    @include media-breakpoint-down(lg) {
-      font-size: 26px;
-      padding-bottom: 20px;
-    }
-  }
-  &__subtitle{
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 31px;
-    letter-spacing: 0%;
-    text-align: center;
-    color: $general;
-    padding-bottom: 73px;
-    max-width: 879px;
-    width: 100%;
-    margin: 0 auto;
-    @include media-breakpoint-down(lg) {
-      font-size: 16px;
-      padding-bottom: 30px;
-    }
-  }
+  border-bottom: 1px solid #D4D4D4;
+
   &__flex{
     display: flex;
     gap: 23px;
