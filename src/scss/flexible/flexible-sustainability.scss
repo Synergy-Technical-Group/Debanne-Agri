@@ -1,0 +1,74 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+
+.sustainability{
+  padding-top: 100px;
+  &--green{
+    border-top: 1px solid #E7E7E7;
+    .sustainability__content{
+      background-color: rgba($primary, .9);
+    }
+    .sustainability__button{
+      background-color: $brand-dark-green;
+    }
+  }
+  &--blue{
+    .sustainability__content{
+      background-color: $brand-blue;
+      right: 0;
+    }
+    .sustainability__button{
+      background-color: $brand-dark-blue;
+    }
+  }
+  &__grid{
+    position: relative;
+  }
+  &__media img{
+    display: flex;
+  }
+  &__content{
+    position: absolute;
+    height: 100%;
+    max-width: 766px;
+    width: 100%;
+    padding-top: 121px;
+    color: $white;
+    padding-left: 47px;
+    @include media-breakpoint-down(lg) {
+      position: static;
+      max-width: 100%;
+      padding: 50px;
+    }
+  }
+  &__title{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 39px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    @include media-breakpoint-down(lg) {
+      font-size: 26px;
+      line-height: normal;
+    }
+  }
+  &__title+p{
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: normal;
+    letter-spacing: 0%;
+    padding-bottom: 74px;
+    max-width: 636px;
+    width: 100%;
+    margin-bottom: 0 ;
+  }
+  &__btn{
+    display: flex;
+  }
+  &__button{
+    padding: 17px 70px;
+  }
+}

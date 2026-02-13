@@ -46,7 +46,7 @@
     .news-views__card__title{
       font-weight: 700;
       font-size: 24px;
-      line-height: 100%;
+      line-height: normal;
       letter-spacing: 0%;
       margin-bottom: 14px;
       color: $white;
@@ -74,7 +74,7 @@
     &__title{
       font-weight: 700;
       font-size: 20px;
-      line-height: 100%;
+      line-height: normal;
       letter-spacing: 0%;
       margin-bottom: 16px;
       margin-top: 0;
@@ -104,7 +104,7 @@
   &__btn__more{
     font-weight: 700;
     font-size: 14px;
-    line-height: 100%;
+    line-height: normal;
     letter-spacing: 0%;
     color: $white;
     &:hover{

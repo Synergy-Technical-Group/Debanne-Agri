@@ -118,6 +118,7 @@ if ( ! function_exists( 'thm_enqueue_scripts_flexible_sections' ) ) {
                                 )
                         )
                 ),
+
                 'news' => array(
                         'css' => array(
                                 'path'   => '/dist/css/flexible/flexible-news.css',
@@ -133,6 +134,7 @@ if ( ! function_exists( 'thm_enqueue_scripts_flexible_sections' ) ) {
                                 )
                         )
                 ),
+
                 'statistic' => array(
                         'css' => array(
                                 'path'   => '/dist/css/flexible/flexible-statistic.css',
@@ -148,6 +150,7 @@ if ( ! function_exists( 'thm_enqueue_scripts_flexible_sections' ) ) {
                                 )
                         )
                 ),
+
                 'agrotica' => array(
                         'css' => array(
                                 'path'   => '/dist/css/flexible/flexible-agrotica.css',
@@ -163,6 +166,7 @@ if ( ! function_exists( 'thm_enqueue_scripts_flexible_sections' ) ) {
                                 )
                         )
                 ),
+
                 'partners' => array(
                         'css' => array(
                                 'path'   => '/dist/css/flexible/flexible-partners.css',
@@ -171,6 +175,22 @@ if ( ! function_exists( 'thm_enqueue_scripts_flexible_sections' ) ) {
                         ),
                         'js' => array(
                                 'path'     => '/dist/js/flexible/flexible-partners.min.js',
+                                'deps'     => array(),
+                                'strategy' => array(
+                                        'in_footer'  => true,
+                                        'strategy'   => 'defer'
+                                )
+                        )
+                ),
+
+                'sustainability' => array(
+                        'css' => array(
+                                'path'   => '/dist/css/flexible/flexible-sustainability.css',
+                                'deps'   => array(),
+                                'inline' => false
+                        ),
+                        'js' => array(
+                                'path'     => '/dist/js/flexible/flexible-sustainability.min.js',
                                 'deps'     => array(),
                                 'strategy' => array(
                                         'in_footer'  => true,
@@ -293,8 +313,8 @@ if ( ! function_exists( 'thm_preload_fonts' ) ) {
 
 	function thm_preload_fonts() {
 		?>
-		<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/src/fonts/lato/Lato-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-		<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/src/fonts/roboto/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+        <link rel="preload" href="<?php echo esc_url(get_template_directory_uri()); ?>/src/fonts/inter/Inter18pt-Regular.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="<?php echo esc_url(get_template_directory_uri()); ?>/src/fonts/poppins/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
 		<?php
 	}
 

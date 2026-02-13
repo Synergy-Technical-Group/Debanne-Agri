@@ -46,7 +46,7 @@
     a{
       font-weight: 500;
       font-size: 16px;
-      line-height: 100%;
+      line-height: normal;
       letter-spacing: 0%;
       padding: 19px 66px;
       height: 53px;
@@ -121,7 +121,7 @@
         &__title {
           font-weight: 500;
           font-size: 12px;
-          line-height: 100%;
+          line-height: normal;
           letter-spacing: 0%;
           margin: 0;
           padding-left: 15px;
@@ -138,14 +138,14 @@
           &__day {
             font-weight: 400;
             font-size: 29px;
-            line-height: 100%;
+            line-height: normal;
             letter-spacing: 0%;
           }
 
           &__month {
             font-weight: 500;
             font-size: 12px;
-            line-height: 100%;
+            line-height: normal;
             letter-spacing: 0%;
             text-transform: uppercase;
           }
