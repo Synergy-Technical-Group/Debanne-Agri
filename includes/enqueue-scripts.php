@@ -198,6 +198,21 @@ if ( ! function_exists( 'thm_enqueue_scripts_flexible_sections' ) ) {
                                 )
                         )
                 ),
+                'quote' => array(
+                        'css' => array(
+                                'path'   => '/dist/css/flexible/flexible-quote.css',
+                                'deps'   => array(),
+                                'inline' => false
+                        ),
+                        'js' => array(
+                                'path'     => '/dist/js/flexible/flexible-quote.min.js',
+                                'deps'     => array(),
+                                'strategy' => array(
+                                        'in_footer'  => true,
+                                        'strategy'   => 'defer'
+                                )
+                        )
+                ),
                 'fancy-box-gallery' => array(
                         'css' => array(
                                 'path'   => '/dist/css/flexible/flexible-fancy-box-gallery.css',
@@ -240,8 +255,20 @@ if ( ! function_exists( 'thm_enqueue_scripts_flexible_sections' ) ) {
                 }
 
                 if ( $js ) {
-                    wp_register_script( 'thm-flexible-' . $key, get_template_directory_uri() . $js['path'] ?? '', $js['deps'] ?? array(), THM_VERSION, $js['strategy'] ?? true );
+                    $js_path = $js['path'] ?? '';
+                    $full_js_path = $js_path ? get_template_directory() . $js_path : '';
+
+                    if ( $full_js_path && file_exists( $full_js_path ) ) {
+                        wp_register_script(
+                                'thm-flexible-' . $key,
+                                get_template_directory_uri() . $js_path,
+                                $js['deps'] ?? array(),
+                                THM_VERSION,
+                                $js['strategy'] ?? true
+                        );
+                    }
                 }
+
 			}
 
 			while ( have_rows( 'flexible_content', $id ) ) {

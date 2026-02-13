@@ -95,6 +95,9 @@
     display: grid;
     row-gap: 54px;
     justify-items: start;
+    @include media-breakpoint-down(lg) {
+      justify-items: center;
+    }
 
     &-item {
       display: flex;
