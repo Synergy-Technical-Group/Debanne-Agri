@@ -1,0 +1,60 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "swiper/swiper" as *;
+@use "swiper/modules/navigation" as *;
+
+
+.partners{
+  position: relative;
+  max-width: 1444px;
+  margin: 0 auto;
+  width: 100%;
+  &__subtitle{
+      padding-bottom: 8px;
+  }
+  &__btn{
+    display: flex;
+    justify-content: center;
+    a{
+      font-family: "Poppins", sans-serif;
+      background: transparent;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: $primary;
+      text-transform: none;
+      &:hover{
+        background-color: transparent;
+        color:$general;
+      }
+    }
+  }
+  &__swiper{
+    padding-top: 90px;
+    max-width: 1144px;
+    padding-bottom: 44px;
+    .swiper-slide{
+      text-align: center;
+      img{
+        max-width: fit-content;
+        height: 76px;
+      }
+    }
+  }
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-prev,
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-next {
+    bottom: 95px;
+    top: auto;
+  }
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-prev {
+    left: 35px !important;
+  }
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-next {
+    right: 35px !important;
+  }
+}

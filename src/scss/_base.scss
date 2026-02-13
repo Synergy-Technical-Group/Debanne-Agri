@@ -56,6 +56,37 @@ h2+p{
   }
 }
 
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next,
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev{
+  background: $white;
+  border: 1px solid $primary;
+  border-radius: 100px;
+  width: 40px !important;
+  height: 40px !important;
+  top: 50%;
+  transform: translate(0px, 35px);
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after{
+  color: $general;
+  font-size: 12px !important;
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-prev {
+  left: 0 !important;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-next {
+  right: 0 !important;
+}
+
 .thm-lazy-loading {
   display: block;
   font-size: 0;

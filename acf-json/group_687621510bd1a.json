@@ -206,6 +206,38 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_698f082f8b9e7": {
+                    "key": "layout_698f082f8b9e7",
+                    "name": "partners",
+                    "label": "Partners",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_698f08388b9ea",
+                            "label": "Partners",
+                            "name": "partners",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_698f075fd8211"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -233,5 +265,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1770969531
+    "modified": 1770981457
 }

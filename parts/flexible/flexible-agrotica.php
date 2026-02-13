@@ -2,6 +2,8 @@
 $section_title = get_sub_field('agrotica_title');
 $subtitle      = get_sub_field('agrotica_subtitle');
 $btn_tpl       = get_sub_field('read_more_link');
+$see_more      = get_sub_field('see_more_button');
+$archive       = get_post_type_archive_link('article');
 
 $featured = get_sub_field('agrotical_posts') ?: [];
 $featured_ids = [];
@@ -111,8 +113,30 @@ $q_sidebar = new WP_Query([
                         </article>
 
                     <?php endwhile; wp_reset_postdata(); ?>
+
+                    <?php if (is_array($see_more) && !empty($see_more['url']) && !empty($see_more['title'])) : ?>
+
+                        <?php
+                        $a_html = thm_get_link($see_more, '', array('class' => 'agrotica__see-more'), false, true);
+
+                        $icon_html =
+                                '<span class="arrow-white"><svg class="icon" width="6" height="10" aria-hidden="true" focusable="false">'
+                                . '<use xlink:href="#arrow-white"></use>'
+                                . '</svg></span>';
+
+                        $a_html = str_replace('</a>', ' ' . $icon_html . '</a>', $a_html);
+                        ?>
+
+                        <div class="agrotica__sidebar-more">
+                            <?php echo $a_html; ?>
+                        </div>
+
+                    <?php endif; ?>
                 </aside>
             <?php endif; ?>
+
+
+
         </div>
     </div>
 </section>
