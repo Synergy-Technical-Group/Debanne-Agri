@@ -26,6 +26,7 @@
     margin-top: 0;
     margin-bottom: 29px;
     color: $white;
+    text-align: left;
   }
   &__points{
     display: flex;
@@ -83,9 +84,13 @@
       line-height: 100%;
       text-transform: uppercase;
       color: $white;
-      margin-bottom: 39px;
       margin-top: 0;
+      text-align: left;
+      &+p{
+        padding: 0;
+      }
     }
+
     .gform-theme--framework .gform_validation_errors{
       display: none;
     }
@@ -209,7 +214,6 @@
     }
   }
   &__bottom-navigation{
-    padding-bottom: 29px;
     #menu-footer-bottom{
       margin: 0;
       padding: 0;
@@ -265,5 +269,55 @@
     line-height: 100%;
     letter-spacing: 0%;
     color: $white;
+  }
+  &__bottom{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 31px;
+  }
+  &__scroll-top{
+    display: flex;
+    justify-content: right;
+  }
+  .scroll-top.is-visible{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    transform:translateY(0);
+  }
+  .scroll-top{
+    cursor: pointer;
+    background: #686866;
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s;
+    position:fixed;
+    right:20px;
+    bottom:200px;
+    z-index:5;
+
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transform:translateY(10px);
+    @include media-breakpoint-down(lg){
+      bottom: 80px;
+    }
+    &:hover {
+      background: #7D7D7D;
+    }
+    svg{
+      width: 27px;
+      height: 27px;
+      use{
+        fill: $white;
+      }
+    }
   }
 }

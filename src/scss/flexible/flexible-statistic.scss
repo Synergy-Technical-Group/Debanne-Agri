@@ -5,6 +5,9 @@
   padding-bottom: 120px;
   font-family: $body-font;
   border-bottom: 1px solid #D4D4D4;
+  @include media-breakpoint-down(lg){
+    padding-bottom: 40px;
+  }
 
   &__flex{
     display: flex;
@@ -52,6 +55,9 @@
     align-items: center;
     justify-content: center;
     padding-top: 89px;
+    @include media-breakpoint-down(lg){
+      padding-top: 40px;
+    }
     a{
       font-weight: 500;
       font-size: 16px;

@@ -138,7 +138,7 @@
           padding-left: 15px;
           @include transition(color 0.3s ease);
           &:hover{
-            color: $white;
+            color: rgba($white, .7);
           }
         }
 
@@ -178,6 +178,9 @@
     z-index: 1;
     gap: 8px;
     transform: translate(-50%, 0);
+    @include media-breakpoint-down(lg){
+      bottom: 20px;
+    }
     }
   .swiper-bullet.is-active{
     height: 2px;

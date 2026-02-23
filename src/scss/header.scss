@@ -137,12 +137,11 @@
           &:focus {
             > .sub-menu {
               display: grid;
+              max-height: max-content;
             }
 
-            .menu-chevron {
-              i {
+            .menu-chevron.open {
                 transform: rotate(180deg);
-              }
             }
           }
         }
@@ -152,6 +151,7 @@
           padding-left: 10px;
           svg{
             fill: $general;
+            transition: all .5s;
           }
 
           @include media-breakpoint-down(lg) {
@@ -162,15 +162,17 @@
             padding: 4px;
             margin-left: auto;
             border-radius: 3px;
+
           }
 
-          i {
-            @include transition();
+          svg {
+            transition: all .5s;;
           }
 
           &.active {
-            i {
+            svg {
               transform: rotate(180deg);
+              transition: all .5s;
             }
           }
         }
@@ -204,12 +206,20 @@
       max-height: max-content;
       display: block;
     }
-
+    .menu-item-has-children.open{
+      .sub-menu{
+        display: grid!important;
+        max-height: none !important;
+        position: static;
+        gap: 15px;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
     .menu-item-has-children:hover > .sub-menu {
       display: block;
       opacity: 1;
       visibility: visible;
-      max-height: none;
     }
 
     .sub-menu {

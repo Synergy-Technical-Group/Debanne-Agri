@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const menu = document.getElementById('menu-header');
     const body = document.body;
 
-    // Відкриття/закриття бургер-меню
     if (navToggle && menu) {
         navToggle.addEventListener('click', function() {
             navToggle.classList.toggle('active');
@@ -12,13 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Сабменю на мобільних
     const menuItems = document.querySelectorAll('#menu-header .menu-item-has-children > a');
 
     menuItems.forEach(item => {
         item.addEventListener('click', function(e) {
             if (window.innerWidth < 992) {
-                e.preventDefault(); // блокуємо перехід по лінці
+                e.preventDefault();
 
                 const parentItem = item.parentElement;
                 const subMenu = parentItem.querySelector('.sub-menu');
@@ -30,16 +28,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 // плавне відкриття
                 if (subMenu.classList.contains('open')) {
                     subMenu.style.maxHeight = subMenu.scrollHeight + 'px';
-                    if (chevron) chevron.classList.add('active'); // поворот стрілки
+                    if (chevron) chevron.classList.add('active');
                 } else {
                     subMenu.style.maxHeight = 0;
-                    if (chevron) chevron.classList.remove('active'); // повертаємо стрілку
+                    if (chevron) chevron.classList.remove('active');
                 }
             }
         });
     });
 
-    // ресайз — прибираємо мобільні стилі при десктопі
     window.addEventListener('resize', function() {
         if (window.innerWidth >= 992) {
             document.querySelectorAll('.sub-menu').forEach(menu => {
@@ -49,5 +46,26 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.menu-item-has-children').forEach(li => li.classList.remove('open'));
             document.querySelectorAll('.menu-chevron').forEach(c => c.classList.remove('active'));
         }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.querySelector('.scroll-top');
+    if (!btn) return;
+
+    const toggleBtn = () => {
+        const doc = document.documentElement;
+        const maxScroll = doc.scrollHeight - window.innerHeight;
+        const half = maxScroll / 2;
+
+        btn.classList.toggle('is-visible', window.scrollY >= half);
+    };
+
+    toggleBtn();
+    window.addEventListener('scroll', toggleBtn, { passive: true });
+    window.addEventListener('resize', toggleBtn);
+
+    btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });
