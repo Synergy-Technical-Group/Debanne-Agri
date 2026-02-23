@@ -25,8 +25,16 @@
         </defs>
     </symbol>
 </svg>
+<!--icon-scroll-top-->
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
     <symbol id="icon-scroll-top" viewBox="0 0 512 640">
         <polygon points="246 143.188 246 407 266 407 266 143.188 356.851 234.039 370.993 219.897 256 104.904 141.007 219.897 155.149 234.039 246 143.188"/>
+    </symbol>
+</svg>
+
+<!--icon-arrow-green-->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+    <symbol id="icon-arrow-green" viewBox="0 0 6 10">
+        <path fill="currentColor" d="M3.81846 5L-4.28277e-07 8.88906L1.09077 10L6 5L1.09077 -2.14589e-07L-8.83182e-08 1.11172L3.81846 5.00079L3.81846 5Z"/>
     </symbol>
 </svg>

@@ -1,9 +1,11 @@
+<?php
+    $services_title = get_sub_field('services_title');
+    $services_sub_title = get_sub_field('services_sub_title');
+    ?>
 
 <section class="services">
     <div class="container">
         <?php
-        $services_title = get_sub_field('services_title');
-        $services_sub_title = get_sub_field('services_sub_title');
 
         if( $services_title ): ?>
         <h2 class="services__title"><?php echo esc_html($services_title); ?></h2>
@@ -39,14 +41,17 @@
                                 <h3 class="services__card-title"><?php echo esc_html($title); ?></h3>
                             <?php endif; ?>
 
-                            <?php if ( $button ): ?>
-                                <a href="<?php echo esc_url($button['url']); ?>" class="services__btn">
-                                    <?php echo esc_html($button['title']); ?>
-                                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3.81846 5L-4.28277e-07 8.88906L1.09077 10L6 5L1.09077 -2.14589e-07L-8.83182e-08 1.11172L3.81846 5.00079L3.81846 5Z" fill="#05A65D"/>
-                                    </svg>
-                                </a>
-                            <?php endif; ?>
+                            <?php
+                            if (is_array($button) && !empty($button['title']) && !empty($button['url'])) {
+                                $a_html = thm_get_link($button, '', array('class' => 'services__btn'), false, true);
+                                $icon_html =
+                                        '<svg class="services__btn-icon icon" width="6" height="10" aria-hidden="true" focusable="false">'
+                                        . '<use href="#icon-arrow-green"></use>'
+                                        . '</svg>';
+
+                                echo str_replace('</a>', ' ' . $icon_html . '</a>', $a_html);
+                            }
+                            ?>
                         </div>
                     <?php endwhile; ?>
                 </div>

@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 parentItem.classList.toggle('open');
                 subMenu.classList.toggle('open');
 
-                // плавне відкриття
                 if (subMenu.classList.contains('open')) {
                     subMenu.style.maxHeight = subMenu.scrollHeight + 'px';
                     if (chevron) chevron.classList.add('active');
