@@ -134,9 +134,6 @@ $q_sidebar = new WP_Query([
                     <?php endif; ?>
                 </aside>
             <?php endif; ?>
-
-
-
         </div>
     </div>
 </section>
