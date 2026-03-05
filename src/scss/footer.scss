@@ -102,6 +102,12 @@
       line-height: 100%;
     }
   }
+  .gform_confirmation_message{
+    color: $primary;
+    font-family: $heading-font;
+    font-size: 20px;
+    line-height: normal;
+  }
   form{
     display: flex;
     align-items: center;
@@ -197,7 +203,7 @@
       .menu-item-has-children{
         .sub-menu{
           display: grid;
-          grid-gap: 18px;
+          grid-gap: 13px;
           padding: 0;
           margin-top: 20px;
           a{

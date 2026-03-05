@@ -15,11 +15,17 @@
   }
   &--blue{
     .sustainability__content{
+      padding-left: 60px;
       background-color: rgba($brand-blue, .9);
       right: 0;
     }
+    .sustainability__title+p{
+      padding-top: 50px;
+      padding-bottom: 64px;
+    }
     .sustainability__button{
       background-color: $brand-dark-blue;
+
     }
   }
   &__grid{
