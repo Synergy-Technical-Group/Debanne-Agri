@@ -16,7 +16,7 @@
   }
 
   &__title {
-    padding-bottom: 20px;
+    padding-bottom: 13px;
   }
 
   &__subtitle {
@@ -24,11 +24,14 @@
     max-width: 602px;
     width: 100%;
     margin: 0 auto;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: normal;
   }
 
   &__card-icon {
     position: absolute;
-    bottom: 50px;
+    bottom: 60px;
     left: 50%;
     transform: translate(-40px, -14px);
 
@@ -44,7 +47,7 @@
     line-height: normal;
     letter-spacing: 0%;
     text-transform: uppercase;
-    margin-top: 56px;
+    margin-top: 47px;
     margin-bottom: 8px;
   }
 
@@ -72,6 +75,10 @@
   .swiper-button-prev,
   .swiper-rtl .swiper-button-prev {
     left: 0;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 47%;
   }
 
   .swiper-button-next,

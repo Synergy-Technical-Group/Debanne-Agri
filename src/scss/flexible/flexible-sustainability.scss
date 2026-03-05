@@ -15,7 +15,7 @@
   }
   &--blue{
     .sustainability__content{
-      background-color: $brand-blue;
+      background-color: rgba($brand-blue, .9);
       right: 0;
     }
     .sustainability__button{

@@ -32,7 +32,7 @@
   }
   &__swiper{
     padding-top: 90px;
-    max-width: 1144px;
+    max-width: 1294px;
     padding-bottom: 44px;
     .swiper-slide{
       text-align: center;
@@ -49,12 +49,12 @@
     bottom: 95px;
     top: auto;
   }
-  .swiper-button-prev,
-  .swiper-rtl .swiper-button-prev {
-    left: 35px !important;
-  }
-  .swiper-button-next,
-  .swiper-rtl .swiper-button-next {
-    right: 35px !important;
-  }
+  //.swiper-button-prev,
+  //.swiper-rtl .swiper-button-prev {
+  //  left: 35px !important;
+  //}
+  //.swiper-button-next,
+  //.swiper-rtl .swiper-button-next {
+  //  right: 35px !important;
+  //}
 }

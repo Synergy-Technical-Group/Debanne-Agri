@@ -61,6 +61,9 @@
       color: $white;
       background: transparent;
       padding: 0;
+      &:hover{
+        color: $general;
+      }
     }
     .btn-connect{
       font-weight: 600;

@@ -22,7 +22,7 @@
   }
   &__content{
     flex: 1;
-    max-width: 679px;
+    max-width: 695px;
     width: 100%;
     @include media-breakpoint-down(lg) {
       max-width: 100%;
@@ -37,7 +37,7 @@
       font-weight: 400;
       font-size: 30px;
       line-height: 39px;
-      padding-top: 40px;
+      padding-top: 31px;
       @include media-breakpoint-down(lg) {
         font-size: 16px;
         line-height: normal;
@@ -45,7 +45,7 @@
     }
   }
   &__meta{
-    padding-top: 70px;
+    padding-top: 45px;
     font-family: $heading-font;
   }
   &__author{

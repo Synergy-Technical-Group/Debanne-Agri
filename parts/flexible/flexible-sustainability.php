@@ -18,9 +18,7 @@ $bg_url = $bg_id ? wp_get_attachment_image_url($bg_id, 'full') : '';
 ?>
 
 <section class="sustainability sustainability--<?php echo esc_attr($color); ?> sustainability--<?php echo esc_attr($position); ?>">
-    <div class="container">
-
-        <div class="sustainability__grid">
+    <div class="sustainability__grid">
 
             <div class="sustainability__content">
                 <?php if (!empty($title)) : ?>
@@ -51,6 +49,4 @@ $bg_url = $bg_id ? wp_get_attachment_image_url($bg_id, 'full') : '';
             </div>
 
         </div>
-
-    </div>
 </section>

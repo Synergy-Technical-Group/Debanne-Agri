@@ -442,7 +442,7 @@ Benefits of Using SVG Sprites </br>
 > ```
 
 ### thm_get_link( $link, $content, $attrs, $display, $content_before_title )
-> Function `thm_get_link( $link, $content, $attrs, $display, $content_before_title )` – Outputs a link with all attributes
+зрз – Outputs a link with all attributes
 Useful for quickly displaying ACF link fields, since it applies all required attributes automatically. </br></br>
 > Parameters:
 > ```text

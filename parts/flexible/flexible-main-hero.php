@@ -1,32 +1,5 @@
-<?php if ( have_rows('hero_slider') ) :
+<?php if ( have_rows('hero_slider') ) : ?>
 
-    $events_q = new WP_Query([
-            'post_type'      => 'event',
-            'post_status'    => 'publish',
-            'posts_per_page' => 2,
-            'meta_key'       => 'event_date',
-            'orderby'        => 'meta_value',
-            'order'          => 'DESC',
-    ]);
-
-    $events = [];
-
-    if ( $events_q->have_posts() ) {
-        while ( $events_q->have_posts() ) { $events_q->the_post();
-
-            $event_date = get_field('event_date');
-            $ts = $event_date ? strtotime($event_date) : false;
-
-            $events[] = [
-                    'title' => get_the_title(),
-                    'link'  => get_permalink(),
-                    'day'   => $ts ? date('d', $ts) : '',
-                    'month' => $ts ? date('M', $ts) : '',
-            ];
-        }
-        wp_reset_postdata();
-    }
-    ?>
     <section class="hero-slider">
         <div class="hero-slider__list swiper">
             <div class="swiper-wrapper">
@@ -36,7 +9,26 @@
                     $title        = get_sub_field('title');
                     $title_bottom = get_sub_field('title_bottom');
                     $link         = get_sub_field('link');
+
+                    $slide_events = get_sub_field('slide_events') ?: [];
+                    $events = [];
+
+                    foreach ( $slide_events as $ev ) {
+                        $event_id = is_object($ev) ? $ev->ID : (int) $ev;
+
+                        $event_date = get_field('event_date', $event_id);
+                        $ts = $event_date ? strtotime(str_replace('/', '-', $event_date)) : false;
+
+                        $events[] = [
+                                'title' => get_the_title($event_id),
+                                'link'  => get_permalink($event_id),
+                                'day'   => $ts ? date('d', $ts) : '',
+                                'month' => $ts ? strtoupper(date('M', $ts)) : '',
+                        ];
+                    }
+
                     ?>
+
                     <div class="hero-slider__item swiper-slide">
                         <div class="hero-slider__image-wrapper">
                             <?php echo thm_get_attachment_by_id($image, 'large', 'medium', false, [
@@ -86,12 +78,13 @@
                                 </div>
                             </div>
                         <?php endif; ?>
-
                     </div>
+
                 <?php endwhile; ?>
 
             </div>
             <div class="swiper-pagination"></div>
         </div>
     </section>
+
 <?php endif; ?>
