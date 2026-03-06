@@ -77,7 +77,7 @@
     width: 100%;
   }
   &__form{
-    padding-bottom: 96px;
+    padding-bottom: 90px;
     .gform_title{
       font-weight: 700;
       font-size: 18px;
@@ -181,8 +181,8 @@
       color:$white;
       padding: 0;
       margin: 0;
-      column-gap:100px;
-      row-gap: 50px;
+      column-gap:92px;
+      row-gap: 45px;
       @include media-breakpoint-down(xl) {
         grid-template-columns: repeat(3, auto);
       }
@@ -239,7 +239,7 @@
   }
   &__bottom-content{
     border-top: 1px solid #666666;
-    padding-top: 43px;
+    padding-top: 36px;
     &--inner{
       display: flex;
       align-items: center;
@@ -275,6 +275,7 @@
     line-height: 100%;
     letter-spacing: 0%;
     color: $white;
+    padding-right: 48px;
   }
   &__bottom{
     align-items: center;
@@ -295,8 +296,8 @@
   .scroll-top{
     cursor: pointer;
     background: #686866;
-    width: 56px;
-    height: 56px;
+    width: 55px;
+    height: 55px;
     border: none;
     border-radius: 100px;
     display: flex;
@@ -304,8 +305,8 @@
     justify-content: center;
     transition: all .5s;
     position:fixed;
-    right:20px;
-    bottom:200px;
+    right:52px;
+    bottom:205px;
     z-index:5;
 
     opacity:0;

@@ -61,6 +61,7 @@
       color: $white;
       background: transparent;
       padding: 0;
+      letter-spacing: 0;
       &:hover{
         color: $general;
       }
@@ -73,6 +74,7 @@
       color: $white;
       padding: 7px 12px;
       background: $primary;
+      letter-spacing: 0;
       &:hover{
         border: none;
         background: $brand-dark-green;

@@ -5,9 +5,7 @@
 
 .hero-slider{
   position: relative;
-  //&__list{
-  //  height: 800px;
-  //}
+
   &__content{
     position: absolute;
     top: 50%;
@@ -62,18 +60,19 @@
       font-size: 16px;
       line-height: normal;
       letter-spacing: 0%;
-      padding: 19px 66px;
+      padding: 19px 75px;
       height: 53px;
       text-transform: none;
       display: flex;
       align-items: center;
       justify-content: center;
+      border-radius: 32px;
     }
   }
   &__events{
     position: absolute;
-    right: 40px;
-    bottom: 99px;
+    right: 30px;
+    bottom: 102px;
     top: auto;
     @include media-breakpoint-down(lg) {
       bottom: 60px;
@@ -87,11 +86,11 @@
     align-items: center;
     @include media-breakpoint-down(lg) {
       flex-direction: row;
-      gap:20px;
+      gap:10px;
       flex-wrap: wrap;
     }
     .event-item {
-      margin-bottom: -20px;
+      margin-bottom: -25px;
       @include media-breakpoint-down(lg) {
         margin-bottom: 0;
       }
@@ -130,7 +129,7 @@
         max-width: 292px;
         width: 100%;
         border-radius: 5px;
-        padding: 17px;
+        padding: 15px;
 
         &__title {
           font-weight: 500;
@@ -156,7 +155,7 @@
           &__day {
             font-weight: 400;
             font-size: 29px;
-            line-height: normal;
+            line-height: 100%;
             letter-spacing: 0%;
           }
 
@@ -176,7 +175,7 @@
     justify-content: center;
     position: absolute;
     height: 10px;
-    bottom: 156px;
+    bottom: 144px;
     left: 50%;
     z-index: 1;
     gap: 8px;
@@ -185,11 +184,13 @@
       bottom: 20px;
     }
     }
+
   .swiper-bullet.is-active{
     height: 2px;
     background: $white;
     width: 5.8125rem;
     }
+
     .swiper-bullet{
       height: 2px;
       background: rgba($white, .7);

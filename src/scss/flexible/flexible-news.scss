@@ -5,13 +5,13 @@
   max-width: 1512px;
   width: 100%;
   margin: 0 auto;
-  padding: 96px 0 158px;
+  padding: 91px 0 153px;
   border-top: 1px solid #D4D4D4;
   @include media-breakpoint-down(lg) {
     padding: 40px 0 40px;
   }
   &__title{
-    padding-bottom: 66px;
+    padding-bottom: 75px;
   }
   &__grid{
     display: flex;
@@ -70,6 +70,8 @@
       margin-bottom: 14px;
       color: $white;
       margin-top: 0;
+      max-width: 400px;
+      width: 100%;
     }
     .news-views__card__excerpt{
       font-weight: 400;
@@ -98,7 +100,7 @@
       margin-bottom: 16px;
       margin-top: 0;
       color:$white;
-      max-width: 400px;
+      max-width: 324px;
       width: 100%;
       @include media-breakpoint-down(ld) {
         font-size: 16px;

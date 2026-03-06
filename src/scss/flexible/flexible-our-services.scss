@@ -4,7 +4,7 @@
 @use "swiper/modules/navigation" as *;
 
 .services {
-  padding: 80px 0 108px;
+  padding: 88px 0 108px;
   color: $general;
   text-align: center;
   position: relative;
@@ -31,9 +31,9 @@
 
   &__card-icon {
     position: absolute;
-    bottom: 60px;
+    bottom: 69px;
     left: 50%;
-    transform: translate(-40px, -14px);
+    transform: translate(-32px, 0);
 
     img {
       max-width: 78px;
@@ -47,7 +47,7 @@
     line-height: normal;
     letter-spacing: 0%;
     text-transform: uppercase;
-    margin-top: 47px;
+    margin-top: 50px;
     margin-bottom: 8px;
   }
 
@@ -78,11 +78,11 @@
   }
   .swiper-button-prev,
   .swiper-button-next {
-    top: 47%;
+    top: 48%;
   }
 
   .swiper-button-next,
   .swiper-rtl .swiper-button-next {
-    right: 0;
+    right: -18px;
   }
 }

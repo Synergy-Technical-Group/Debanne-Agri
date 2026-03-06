@@ -163,3 +163,11 @@ if ( ! function_exists( 'thm_display_flexible_content' ) ) {
 	    echo ob_get_clean();
     }
 }
+function hide_posts_comments_menu() {
+    remove_menu_page('edit.php');
+    remove_menu_page('edit-comments.php');
+}
+add_action('admin_menu', 'hide_posts_comments_menu');
+
+add_filter('comments_open', '__return_false', 20, 2);
+add_filter('pings_open', '__return_false', 20, 2);

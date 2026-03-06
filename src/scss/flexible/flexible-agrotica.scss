@@ -2,7 +2,7 @@
 @use "../mixins" as *;
 
 .agrotica {
-  padding: 123px 0 126px;
+  padding: 134px 0 120px;
   text-align: center;
   @include media-breakpoint-down(md) {
    padding: 60px 0 60px;
@@ -10,14 +10,16 @@
 
   h2+p{
     padding-bottom: 77px;
-    max-width: 860px;
+    max-width: 892px;
+    @include media-breakpoint-down(lg) {
+      padding-bottom: 30px;
+    }
   }
 
   &__flex {
     display: flex;
-    gap: 54px;
+    gap: 55px;
     align-items: flex-start;
-    justify-content: space-between;
     @include media-breakpoint-down(lg) {
       flex-direction: column;
     }
@@ -39,6 +41,9 @@
     flex-wrap: wrap;
     gap: 54px;
     max-width: 917px;
+    @include media-breakpoint-down(lg) {
+      gap: 20px;
+    }
 
     .agrotica-card {
       flex: 33%;
@@ -69,7 +74,6 @@
         line-height: normal;
         margin: 0 0 20px;
         color: $white;
-        max-width: 300px;
         width: 100%;
 
         @include media-breakpoint-down(lg) {
@@ -93,7 +97,7 @@
 
   &__sidebar {
     display: grid;
-    row-gap: 54px;
+    row-gap: 55px;
     justify-items: start;
     @include media-breakpoint-down(lg) {
       justify-items: center;
@@ -117,11 +121,12 @@
 
       &__title {
         font-weight: 600;
-        font-size: 20px;
+        font-size: 18px;
         line-height: normal;
         margin: 0;
         color: $general;
         padding-bottom: 16px;
+        max-width: 246px;
       }
     }
     .agrotica-card__link {
