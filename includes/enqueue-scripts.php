@@ -125,14 +125,6 @@ if ( ! function_exists( 'thm_enqueue_scripts_flexible_sections' ) ) {
                                 'deps'   => array(),
                                 'inline' => false
                         ),
-                        'js' => array(
-                                'path'     => '/dist/js/flexible/flexible-news.min.js',
-                                'deps'     => array(),
-                                'strategy' => array(
-                                        'in_footer'  => true,
-                                        'strategy'   => 'defer'
-                                )
-                        )
                 ),
 
                 'statistic' => array(
@@ -141,14 +133,6 @@ if ( ! function_exists( 'thm_enqueue_scripts_flexible_sections' ) ) {
                                 'deps'   => array(),
                                 'inline' => false
                         ),
-                        'js' => array(
-                                'path'     => '/dist/js/flexible/flexible-statistic.min.js',
-                                'deps'     => array(),
-                                'strategy' => array(
-                                        'in_footer'  => true,
-                                        'strategy'   => 'defer'
-                                )
-                        )
                 ),
 
                 'agrotica' => array(
@@ -157,14 +141,6 @@ if ( ! function_exists( 'thm_enqueue_scripts_flexible_sections' ) ) {
                                 'deps'   => array(),
                                 'inline' => false
                         ),
-                        'js' => array(
-                                'path'     => '/dist/js/flexible/flexible-agrotica.min.js',
-                                'deps'     => array(),
-                                'strategy' => array(
-                                        'in_footer'  => true,
-                                        'strategy'   => 'defer'
-                                )
-                        )
                 ),
 
                 'partners' => array(
@@ -204,14 +180,7 @@ if ( ! function_exists( 'thm_enqueue_scripts_flexible_sections' ) ) {
                                 'deps'   => array(),
                                 'inline' => false
                         ),
-                        'js' => array(
-                                'path'     => '/dist/js/flexible/flexible-quote.min.js',
-                                'deps'     => array(),
-                                'strategy' => array(
-                                        'in_footer'  => true,
-                                        'strategy'   => 'defer'
-                                )
-                        )
+
                 ),
                 'fancy-box-gallery' => array(
                         'css' => array(

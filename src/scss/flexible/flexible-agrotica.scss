@@ -41,6 +41,7 @@
     flex-wrap: wrap;
     gap: 54px;
     max-width: 917px;
+    width: 100%;
     @include media-breakpoint-down(lg) {
       gap: 20px;
     }
@@ -56,6 +57,17 @@
 
       &__thumb {
         display: flex;
+        position: relative;
+        &::after{
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.85) 100%);
+          pointer-events: none;
+          top: auto;
+          bottom: 0;
+          height: 92px;
+        }
         @include media-breakpoint-down(md) {
           height: 300px;
         }
@@ -100,7 +112,7 @@
     row-gap: 55px;
     justify-items: start;
     @include media-breakpoint-down(lg) {
-      justify-items: center;
+      justify-items: normal;
     }
 
     &-item {
@@ -112,6 +124,7 @@
         display: flex;
         img{
           max-width: 127px;
+          height: 127px;
         }
       }
       &__content {
@@ -127,6 +140,9 @@
         color: $general;
         padding-bottom: 16px;
         max-width: 246px;
+        @include media-breakpoint-down(lg){
+          max-width: 100%;
+        }
       }
     }
     .agrotica-card__link {
